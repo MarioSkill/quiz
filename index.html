@@ -42,7 +42,7 @@
     <section id="about" style="padding: 20px 0;">
       <div class="container">
         <div class="row">
-          <div class="text-center">
+<div class="text-center">
   <img src="perrete.jpg" class="rounded" alt="El rey del hpc">
 </div>
       <div class="col-sm-6 col-sm-offset-3">
@@ -68,6 +68,7 @@
         </div>
       </div>
     </section>
+
 
 
     <!-- Footer -->
@@ -144,12 +145,12 @@ var contains = function(needle) {
         while (i<n){
           j=0;
           var id =numGen[i];
-          quiz=quiz+"<li><br><p>"+json.peerwise[id].Q+"</p>"+'<div class="custom-controls-stacked">'
+          quiz=quiz+"<li><br><p> (Difficulty: <b>"+json.peerwise[id].Difficulty+"</b>) "+json.peerwise[id].Q+"</p>"+'<div class="custom-controls-stacked">'
           var preguntas="<form action='' class='hpc'>";
           q = json.peerwise[id].options;
           while(j<json.peerwise[id].options.length-1){
             preguntas=preguntas+ 
-            '<label style ="display: block;" class="custom-control custom-radio"><input id="question-'+j+'-answers-'+q[j].tipe+'" name="radio-stacked" type="radio" class="custom-control-input" value="'+q[j].R+'"><span class="custom-control-indicator"></span><span class="custom-control-description">'+q[j].tipe+') '+q[j].frase+'</span></label>'
+            '<label style ="display: block;" class="custom-control custom-radio"><input id="question-'+j+'-answers-'+q[j].tipe+'" name="radio-stacked" type="radio" class="custom-control-input" value="'+q[j].R+'"><span info="'+id+'" class="custom-control-indicator"></span><span class="custom-control-description">'+q[j].tipe+') '+q[j].frase+'</span></label>'
 
 
             //'<input type="radio" name="question_'+id+'_'+j+'" value="'+q[j].R+'">'+q[j].tipe+') '+q[j].frase+'</p><br>'
@@ -158,7 +159,7 @@ var contains = function(needle) {
 
             j++;
           }
-          quiz=quiz+preguntas+'</div></li><br>'
+          quiz=quiz+preguntas+'</div><div id="info_'+id+'"></div></li><br>'
           //
           i++;
         }
@@ -177,10 +178,15 @@ var contains = function(needle) {
         }else{
           $(this).next().css('background', 'red');
         }
-        console.log(respuesta); 
+        data=parseInt(elem.next().attr("info"));
+        pos =json.peerwise[data].options.length-1;
+        $("#info_"+data).html("")
+        $("#info_"+data).html(window.atob(json.peerwise[data].options[pos].INFO))
+        console.log(data); 
     });
 
   });
+
 
 
 
@@ -188,3 +194,4 @@ var contains = function(needle) {
   </body>
 
 </html>
+
