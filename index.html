@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">INGENIEROS, aunque Mario</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>En HPC nosotros creemos !</h1>
+        <p class="lead">Generador aleatorio de preguntas en basadas en las realizadas en el curso 2017/2018 del Master en INGENIERÍA INFORMÁTICA aunque Mario ...</p>
+      </div>
+    </header>
+
+    <section id="about" style="padding: 20px 0;">
+      <div class="container">
+        <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="thumbnail">
+          
+          <div class="caption">
+            <h3>Aleatorios!!</h3>
+            <p>create talble pool from ( select * from peerWise.com ).</p>
+            <p><label for="preguntas">Numero de preguntas</label>
+              <input type="number" class="form-control" id="numero"><br>
+              <button class="btn btn-default" role="button" id="button">Generar Preguntas</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-sm-offset-1">
+        <div class="thumbnail">
+          <div class="caption" id="questions">
+
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; eeeee eso so eso es</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+<script src="js/datos.js"></script>
+<script> 
+var contains = function(needle) {
+    // Per spec, the way to identify NaN is that it is not equal to itself
+    var findNaN = needle !== needle;
+    var indexOf;
+
+    if(!findNaN && typeof Array.prototype.indexOf === 'function') {
+        indexOf = Array.prototype.indexOf;
+    } else {
+        indexOf = function(needle) {
+            var i = -1, index = -1;
+
+            for(i = 0; i < this.length; i++) {
+                var item = this[i];
+
+                if((findNaN && item !== item) || item === needle) {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        };
+    }
+
+    return indexOf.call(this, needle) > -1;
+};  
+
+  var maxN=json.peerwise.length-1;
+  $(document).ready(function(){
+      //var myJSON = JSON.stringify(myObj);
+    
+    $( "#button" ).click(function(e) {
+      e.preventDefault();
+        n = parseInt($('#numero').val());
+        if (n>maxN)
+          n=maxN;
+        var i =0
+        var numGen=new Array();
+        while(i<n){
+          do {
+            var aleatorio = Math.round(Math.random()*(maxN));
+
+          } while (contains.call(numGen, aleatorio));
+          numGen[i]=aleatorio
+          i++;
+        }
+        //numGen=numGen.sort();
+        i=0;
+        var quiz ="<ol>";
+        while (i<n){
+          j=0;
+          var id =numGen[i];
+          quiz=quiz+"<li><br><p>"+json.peerwise[id].Q+"</p>"+'<div class="custom-controls-stacked">'
+          var preguntas="<form action='' class='hpc'>";
+          q = json.peerwise[id].options;
+          while(j<json.peerwise[id].options.length-1){
+            preguntas=preguntas+ 
+            '<label style ="display: block;" class="custom-control custom-radio"><input id="question-'+j+'-answers-'+q[j].tipe+'" name="radio-stacked" type="radio" class="custom-control-input" value="'+q[j].R+'"><span class="custom-control-indicator"></span><span class="custom-control-description">'+q[j].tipe+') '+q[j].frase+'</span></label>'
+
+
+            //'<input type="radio" name="question_'+id+'_'+j+'" value="'+q[j].R+'">'+q[j].tipe+') '+q[j].frase+'</p><br>'
+            /*
+            "<input type='radio' name='question-"+j+"-answers' id='question-"+j+"-answers-"+q[j].tipe+"' value='"+q[j].tipe+"'><label for='"+q[j].tipe+"'>"+q[j].tipe+") "+q[j].frase+"  </label>"*/
+
+            j++;
+          }
+          quiz=quiz+preguntas+'</div></li><br>'
+          //
+          i++;
+        }
+        quiz=quiz+"</ol>"
+        $( "#questions" ).html("")
+        $( "#questions" ).append( quiz );
+        
+        //console.log(quiz)
+    });
+    $(document).on('change', 'input:radio[id^="question-"]', function (event) {
+
+        var respuesta = this.value;
+        elem = $(this)
+        if (respuesta=="true"){
+          $(this).next().css('background', 'green');
+        }else{
+          $(this).next().css('background', 'red');
+        }
+        console.log(respuesta); 
+    });
+
+  });
+
+
+
+</script>
+  </body>
+
+</html>
