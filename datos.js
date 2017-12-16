@@ -358,8 +358,8 @@ var json =
 		"Q":"En OMP, ¿Cuál es la diferencia entre '#pragma omp critical' y '#pragma omp atomic'?__",
 		"options":
 		[
-			{"tipe":"A","frase":"<b>#pragma omp critical</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp atomic<b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":true},
-			{"tipe":"B","frase":"<b>#pragma omp atomi</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp critical<b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":false},
+			{"tipe":"A","frase":"<b>#pragma omp critical</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp atomic</b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":true},
+			{"tipe":"B","frase":"<b>#pragma omp atomi</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp critical</b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":false},
 			{"tipe":"C","frase":"Ambas son gestionadas de forma idéntica, pero dependiendo de las operaciones que se quieran realizar, proporcionan diferentes resultados.","R":false},
 			{"INFO":"VW5hIHNlY2Npw7NuIGNyw610aWNhIGRlIE9wZW5NUCBlcyBjb21wbGV0YW1lbnRlIGdlbmVyYWwsIGVzIGRlY2lyLCBwdWVkZSByb2RlYXIgY3VhbHF1aWVyIGJsb3F1ZSBhcmJpdHJhcmlvIGRlIGPDs2RpZ28sIG1pZW50cmFzIHF1ZSB1bmEgb3BlcmFjacOzbiBhdMOzbWljYSB0aWVuZSBnYXN0b3MgZ2VuZXJhbGVzIG11Y2hvIG3DoXMgYmFqb3MgeWEgcXVlIGVuIGVzZSBjYXNvIG5vIGhheSBibG9xdWVvIG5pIGRlc2Jsb3F1ZW8gbmVjZXNhcmlvcyBhbCBlbnRyYXIgeSBzYWxpciBkZSBsYSBsw61uZWEgZGUgY8OzZGlnbywgc8OzbG8gaGFjZSB1bmEgbW9kaWZpY2FjacOzbiBhdMOzbWljYSBkZSB1biBkYXRvIGNvbmNyZXRvIGRlIGZvcm1hIHF1ZSBuaW5nw7puIG90cm8gaGlsbyBwdWVkZSByZWFsaXphciBvdHJhIG9wZXJhY2nDs24gc29icmUgZWwgbWlzbW8gZGF0byBoYXN0YSBxdWUgbGEgcHJpbWVyYSBubyBzZSBjb21wbGV0ZS4NCg=="}
 		],
