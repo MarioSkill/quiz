@@ -358,8 +358,8 @@ var json =
 		"Q":"En OMP, ¿Cuál es la diferencia entre '#pragma omp critical' y '#pragma omp atomic'?__",
 		"options":
 		[
-			{"tipe":"A","frase":"<b>#pragma omp critical</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp atomic<b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":true},
-			{"tipe":"B","frase":"<b>#pragma omp atomi</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp critical<b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":false},
+			{"tipe":"A","frase":"<b>#pragma omp critical</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp atomic</b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":true},
+			{"tipe":"B","frase":"<b>#pragma omp atomi</b> permite únicamente acceder a un hilo al mismo tiempo en la sección que definamos, mientras que <b>#pragma omp critical</b> sólo permite realizar una operación al mismo tiempo sobre un dato concreto.","R":false},
 			{"tipe":"C","frase":"Ambas son gestionadas de forma idéntica, pero dependiendo de las operaciones que se quieran realizar, proporcionan diferentes resultados.","R":false},
 			{"INFO":"VW5hIHNlY2Npw7NuIGNyw610aWNhIGRlIE9wZW5NUCBlcyBjb21wbGV0YW1lbnRlIGdlbmVyYWwsIGVzIGRlY2lyLCBwdWVkZSByb2RlYXIgY3VhbHF1aWVyIGJsb3F1ZSBhcmJpdHJhcmlvIGRlIGPDs2RpZ28sIG1pZW50cmFzIHF1ZSB1bmEgb3BlcmFjacOzbiBhdMOzbWljYSB0aWVuZSBnYXN0b3MgZ2VuZXJhbGVzIG11Y2hvIG3DoXMgYmFqb3MgeWEgcXVlIGVuIGVzZSBjYXNvIG5vIGhheSBibG9xdWVvIG5pIGRlc2Jsb3F1ZW8gbmVjZXNhcmlvcyBhbCBlbnRyYXIgeSBzYWxpciBkZSBsYSBsw61uZWEgZGUgY8OzZGlnbywgc8OzbG8gaGFjZSB1bmEgbW9kaWZpY2FjacOzbiBhdMOzbWljYSBkZSB1biBkYXRvIGNvbmNyZXRvIGRlIGZvcm1hIHF1ZSBuaW5nw7puIG90cm8gaGlsbyBwdWVkZSByZWFsaXphciBvdHJhIG9wZXJhY2nDs24gc29icmUgZWwgbWlzbW8gZGF0byBoYXN0YSBxdWUgbGEgcHJpbWVyYSBubyBzZSBjb21wbGV0ZS4NCg=="}
 		],
@@ -783,8 +783,47 @@ var json =
 		"Difficulty":"easy",
 		"tags":["MPI", "paso de mensajes", "memoria distribuida",]
 	},
-
-			
+	{
+		"tipo":"OMP",
+		"Q":"En OpenMP, cual es la diferencia entre las directivas threadprivate y private?:__",
+		"options":
+		[
+			{"tipe":"A","frase":"Si usamos private, los datos se almacenaran en la pila, mientras que si usamos threadprivate se almacenaran en el heap. ","R":true},
+			{"tipe":"B","frase":"La directiva threadprivate en OpenMP no existe, por lo tanto la directiva private, lo que nos permite es hacer que una variable sea local a cada hilo","R":false},
+			{"tipe":"C","frase":"Ninguna es correcta.","R":false},
+			{"INFO":"VW5hIHZhcmlhYmxlIHByaXZhdGUgZXMgbG9jYWwgYSB1bmEgcmVnacOzbiB5IHNlIGNvbG9jYXLDoSBsYSBtYXlvciBwYXJ0ZSBkZWwgdGllbXBvIGVuIGxhIHBpbGEuIExhIHZpZGEgw7p0aWwgZGUgbGEgcHJpdmFjaWRhZCBkZSBsYSB2YXJpYWJsZSBlcyBsYSBkdXJhY2nDs24gZGVmaW5pZGEgYWxjYW5jZSBkZSBsb3MgZGF0b3MgcGFyYWxpemFkb3MuIENhZGEgaGlsbyAoaW5jbHV5ZW5kbyBlbCBoaWxvIHJhw616KSBoYWNlIHVuYSBjb3BpYSBwcml2YWRhIGRlIGxhIHZhcmlhYmxlIG9yaWdpbmFsIChsYSBudWV2YSB2YXJpYWJsZSB5YSBubyBzZSBhbG1hY2VuYSBhc29jaWFkYSBhIGxhIHZhcmlhYmxlIG9yaWdpbmFsKS4NCg0KIA0KDQpVbmEgdmFyaWFibGUgdGhyZWFkcHJpdmF0ZSBwb3Igb3RyYSBwYXJ0ZSwgbG8gbcOhcyBwcm9iYWJsZSBlcyBxdWUgc2UgY29sb3F1ZSBlbiBlbCBoZWFwIG8gZW4gZWwgYWxtYWNlbmFtaWVudG8gbG9jYWwgZGVsIGhpbG8gKHF1ZSBwdWVkZSBzZXIgdmlzdG8gY29tbyB1bmEgbWVtb3JpYSBnbG9iYWwgbG9jYWwgYSB1biBoaWxvKS4gR3VhcmRhIHVuYSB2YXJpYWJsZSBwcml2YWRhIGVudHJlIHJlZ2lvbmVzIC4gRWwgaGlsbyByYcOteiB1dGlsaXphIGxhIHZhcmlhYmxlIG9yaWdpbmFsLCB0b2RvcyBsb3Mgb3Ryb3MgaGlsb3MgaGFjZW4gdW5hIGNvcGlhIHByaXZhZGEgZGUgbGEgdmFyaWFibGUgb3JpZ2luYWwgKGxhIHZhcmlhYmxlIG1hZXN0cmEgc2lndWUgc2llbmRvIGFsbWFjZW5hZGEgYXNvY2lhZGEgYSBsYSB2YXJpYWJsZSBvcmlnaW5hbCku"}
+		],
+		"Difficulty":"very hard	",
+		"tags":["OpenMP", "Programación multihilo", "paralelización",]
+	},
+	{
+		"tipo":"CUDA",
+		"Q":"Tenemos un matriz, A, de tamaño N, si la complejidad de multiplicar A*A es de O(N^3) en una CPU, cual ser la complejidad de hacerlo usando una GPU?:__",
+		"options":
+		[
+			{"tipe":"A","frase":"O(N)","R":true},
+			{"tipe":"B","frase":"1","R":false},
+			{"tipe":"C","frase":"O(N^2)","R":false},
+			{"tipe":"D","frase":"Ninguna de las Anteriores":false},
+			{"INFO":"RGFkYXMgbGFzIGNhcmFjdGVyw61zdGljYXMgZGUgY29tcHV0byBkZSB1bmEgR1BVLCBlbiB1bmEgc29sYSBpbnRlcmFjY2nDs24gcG9kcsOtYW1vcyBtdWx0aXBsaWNhciAyIHZlY3RvcmVzLCBjb21vIHRlbmVtb3MgTiwgdmVjdG9yZXMsIGxhIGNvbXBsZWppZGFkIHNlcsOtYSBPKE4p"}
+		],
+		"Difficulty":"very hard	",
+		"tags":["OpenMP", "Programación multihilo", "paralelización",]
+	},
+	{
+		"tipo":"MPI",
+		"Q":"La función de MPI, MPI_Comm_size(MPI_COMM_WORLD, &size), permite:__",
+		"options":
+		[
+			{"tipe":"A","frase":"Determina cual es el tamaño máximo de datos que se pueden enviar con las funciones send, recive","R":false},
+			{"tipe":"B","frase":"Esta función, permite obtener el tamaño de datos que están procesando todos los procesos.","R":false},
+			{"tipe":"C","frase":"Determina el tamaño del comunicador seleccionado, es decir, el número de procesos que están actualmente asociados a este","R":true},
+			{"tipe":"D","frase":"Ninguna de las Anteriores":false},
+			{"INFO":"RXN0YSBmdW5jacOzbiBkZXZ1ZWx2ZSBlbCB0YW1hw7FvIGRlbCBjb211bmljYWRvciBzZWxlY2Npb25hZG8uIFN1IHVzbyBlcyBtdXkgY29tw7puIGVuIGxvcyBwcm9ncmFtYXMgYmFzYWRvcyBlbiBNUEkuIFBhcmEgZXhwbGljYXIgbWVqb3IgY8OzbW8gZnVuY2lvbmEgaGFyZW1vcyB1c28gZGUgdW5hIGlsdXN0cmFjacOzbi4gRW4gbGEgc2lndWllbnRlIGltYWdlbiBwb2RlbW9zIHZlciBkb3MgY29tdW5pY2Fkb3JlcywgZWwgY29tdW5pY2Fkb3IgZ2xvYmFsLCBlbiBlbCBxdWUgc2llbXByZSBzZSBlbmN1ZW50cmFuIHRvZG9zIGxvcyBwcm9jZXNvcyAoTVBJX0NPTU1fV09STEQpIHkgdW4gY29tdW5pY2Fkb3IgY3JlYWRvIG1hbnVhbG1lbnRlIChjb21tMSkgZW4gZWwgcXVlIHNvbG8gdGVuZW1vcyBjdWF0cm8gZGUgbG9zIHByb2Nlc29zLiBWZW1vcyBxdWUgZW4gdG90YWwgc29uIG9jaG8gcHJvY2Vzb3MgKGRlc2RlIFAwIGhhc3RhIFA3KS4gU2kgcGVkaW1vcyBlbCB0YW1hw7FvIGRlbCBjb211bmljYWRvciBnbG9iYWwsIG5vcyBkaXLDoSBxdWUgaGF5IG9jaG8gcHJvY2Vzb3MsIHBhcmEgZWwgb3RybyBjb211bmljYWRvciwgbm9zIGRpcsOhIHF1ZSBoYXkgNC4="}
+		],
+		"Difficulty":"very hard	",
+		"tags":["OpenMP", "Programación multihilo", "paralelización",]
+	},	
 	
 ]
 }
