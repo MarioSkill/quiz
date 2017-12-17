@@ -652,7 +652,7 @@ var json =
 		[
 			{"tipe":"A","frase":"Host se refiere a la CPU y a su memoria y Device a la GPU y a su memoria.","R":true},
 			{"tipe":"B","frase":"Host se refiere a la GPU en la que se lanza el programa paralelo y Device al dispositivo de procesamiento.","R":false},
-			{"tipe":"C","Host se refiere al equipo físico que alberga la GPU y Device es la GPU en sí.","R":false},
+			{"tipe":"C","frase":"Host se refiere al equipo físico que alberga la GPU y Device es la GPU en sí.","R":false},
 			{"tipe":"D","frase":"Ninguna de las anteriores.","R":false},
 			{"INFO":"UGFyYSBxdWUgcXVlZGVuIGJpZW4gZGlmZXJlbmNpYWRhcyBhbWJhcyBwYXJ0ZXMsIHNlIGRlZmluZSBjb21vIEhvc3QgYSBsYSBDUFUgKGRlc2RlIGRvbmRlIHNlIGxsYW1hcsOhIGEgbGEgZnVuY2nDs24gcGFyYWxlbGEgY29ycmVzcG9uZGllbnRlKSB5IHN1IG1lbW9yaWEgKGhvc3QgbWVtb3J5KTsgeSBEZXZpY2UgYSBsYSBHUFUgKGRvbmRlIGNvcnJlcsOhIGxhIGZ1bmNpw7NuKSB5IHN1IG1lbW9yaWEgKGRldmljZSBtZW1vcnkpLg=="}
 		],
@@ -671,7 +671,7 @@ var json =
 			{"INFO":"RGVwZW5kaWVuZG8gZGUgbGEgYXJxdWl0ZWN0dXJhIGRlbCBEZXZpY2UgeSBkZSBsYXMgY2FyYWN0ZXLDrXN0aWNhcyBkZWwgcHJvZ3JhbWEgYSBlamVjdXRhciBlbiBDVURBLCBtb2RpZmljYXIgY29ycmVjdGFtZW50ZSBsYXMgZGltZW5zaW9uZXMgZGUgbG9zIEdyaWQgeSBjYW1iaWFyIGVsIG1hcGVhZG8gZGUgbGEgbWF0cml6IGVuIGxvcyBkaWZlcmVudGVzIGJsb3F1ZXMgZSBoaWxvcywgcG9kcsOtYSBtZWpvcmFyIGVsIGFjY2VzbyBhIGxvcyBkYXRvcyBkZSBmb3JtYSBxdWUgcmVkdXpjYW1vcyBlbCBuw7ptZXJvIGRlIGl0ZXJhY2lvbmVzIG5lY2VzYXJpYXMuIEVzIGltcG9ydGFudGUgdGVuZXIgZW4gY3VlbnRhIHF1ZSBjdWFuZG8gcmUtZGltZW5zaW9uYW1vcyBsb3MgR3JpZCwgZGViZW1vcyBjb21wcm9iYXIgcXVlIGVsIG7Dum1lcm8gZGUgaGlsb3Mgc2VhIGVsIGFkZWN1YWRvIHkgbmVjZXNhcmlvIHBhcmEgbGFzIGRpbWVuc2lvbmVzIGRlbCBwcm9ibGVtYS4="}
 		],
 		"Difficulty":"easy / medium",
-		"tags":["",]
+		"tags":["CUDA"]
 	},
 	{
 		"tipo":"CUDA",
