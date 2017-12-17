@@ -80,7 +80,7 @@ var json =
 		"options":
 		[
 			{"tipe":"A","frase":"Solo las síncronas","R":false},
-			{"tipe":"B","frase":"Síncronas y asíncronas","R":false},
+			{"tipe":"B","frase":"Síncronas y asíncronas","R":true},
 			{"tipe":"C","frase":"Sólo las colectivas","R":false},
 			{"tipe":"D","frase":"Síncronas, asíncronas y colectivas.","R":false},
 			{"INFO":"TGFzIGNvbXVuaWNhY2lvbmVzIG5vZG8gYSBub2RvIChwdW50byBhIHB1bnRvKSBzb24gc2llbXByZSBsYXMgc8OtbmNyb25hcyB5IGFzw61uY3JvbmFzLCBpbmRlcGVuZGllbnRlbWVudGUgZGUgc2kgZXMgbmVjZXNhcmlvIGVzcGVyYXIgY29uZmlybWFjacOzbiBkZSByZWNlcGNpw7NuIG8gbm8gKGJsb3F1ZWFudGUgeSBubyBibG9xdWVhbnRlKS4NCg0KTGFzIGNvbXVuaWNhY2lvbmVzIGNvbGVjdGl2YXMgc29uIGRlIHVubyBhIG11Y2hvcyBwb3IgbG8gcXVlIGVzIGRlIHB1bnRvIGEgdmFyaW9zIHB1bnRvcy4="}
@@ -108,8 +108,8 @@ var json =
 		"options":
 		[
 			{"tipe":"A","frase":"El tiempo de computo del programa siempre podrá disminuirse si incrementamos el número de nodos involucrados.","R":false},
-			{"tipe":"B","frase":"El tiempo de ejecución total del programa variará teniendo en cuenta el tiempo de cómputo y el tiempo de comunicación entre los nodos implicados","R":false},
-			{"tipe":"C","frase":"Cuantos más nodos intervengan, más se podrá reducir el tiempo de comunicación, pero el tiempo de computo llegará un momento en el que no disminuya.","R":true},
+			{"tipe":"B","frase":"El tiempo de ejecución total del programa variará teniendo en cuenta el tiempo de cómputo y el tiempo de comunicación entre los nodos implicados","R":true},
+			{"tipe":"C","frase":"Cuantos más nodos intervengan, más se podrá reducir el tiempo de comunicación, pero el tiempo de computo llegará un momento en el que no disminuya.","R":false},
 			{"INFO":"U2kgdGVuZW1vcyB2YXJpb3MgcHJvY2Vzb3MgZGlzdHJpYnVpZG9zIGVudHJlIGRpZmVyZW50ZXMgbm9kb3MgeSBlc3RvcyB0aWVuZW4gcXVlIHNpbmNyb25pemFyc2UgZW50cmUgZWxsb3MsIGVzIG5vcm1hbCBwZW5zYXIgcXVlIGVsIHRpZW1wbyBkZSBjb211bmljYWNpw7NuIGF1bWVudGUgZW4gZnVuY2nDs24gZGVsIG7Dum1lcm8gZGUgbm9kb3MuIEFkZW3DoXMsIGN1YW50b3MgbWFzIG5vZG9zIHJlYWxpY2VuIGxhIHRhcmVhIGRlIGZvcm1hIHBhcmFsZWxhLCBlbCB0aWVtcG8gZGUgY8OzbXB1dG8gY2FkYSB2ZXogc2Vyw6EgbWFzIHBlcXVlw7FvLCBwZXJvIGRlcGVuZGllbmRvIGRlIGxhcyBjYXJhY3RlcsOtc3RpY2FzIGRlbCBwcm9ibGVtYSB5L28gYXJxdWl0ZWN0dXJhIGRlbCBzaXN0ZW1hLCBoYWJyw6EgdW4gbW9tZW50byBkb25kZSBubyBkaXNtaW51eWEgbWFzLg0KDQpUZW5pZW5kbyB0b2RvIGVzdG8gZW4gY3VlbnRhLCBzZSBwdWVkZSBkZWR1Y2lyIHF1ZSBlbCB0aWVtcG8gZGUgZWplY3VjacOzbiB0b3RhbCBkZWwgcHJvZ3JhbWEgZGVwZW5kZSBkZSBlc3RvcyBkb3MgZmFjdG9yZXM6IHRpZW1wbyBkZSBjb211bmljYWNpw7NuIHkgdGllbXBvIGRlIGPDs21wdXRvLg0K"}
 		],
 		"Difficulty":"medium",
@@ -151,7 +151,7 @@ var json =
 		[
 			{"tipe":"A","frase":"Convierte las llamadas MPI bloqueantes en llamadas no bloqueantes.","R":false},
 			{"tipe":"B","frase":"En una llamada colectiva GATHER, se pasa como sendbuf al proceso principal, ignorando los parámetros sendcount y sendtype para no enviar datos innecesarios.","R":true},
-			{"tipe":"C","frase":"En una llamada colectiva SCATTER, se pasa como sendbuf al proceso principal, ignorando los parámetros sendcount y sendtype para que no se envíe datos a sí mismo.","R":true},
+			{"tipe":"C","frase":"En una llamada colectiva SCATTER, se pasa como sendbuf al proceso principal, ignorando los parámetros sendcount y sendtype para que no se envíe datos a sí mismo.","R":false},
 			{"tipe":"D","frase":"Identifica a todos los procesos dentro del comunicador IN PLACE.","R":false},
 			{"INFO":"RW4gR0FUSEVSLCBNUElfSU5fUExBQ0Ugc2UgcGFzYSBhbCBiw7pmZXIgZGUgZW52w61vIGRlIGRhdG9zLiBMb3MgcGFyw6FtZXRyb3Mgc2VuZGNvdW50IHkgc2VuZHR5cGUgc2UgaWdub3JhbiwgcG9yIGxvIHF1ZSBzZSBhc3VtZSBxdWUgZWwgcHJvY2VzbyBwcmluY2lwYWwgeWEgaGEgaGVjaG8gc3UgY29udHJpYnVjacOzbiBlbiBlbCBiw7pmZXIgZGUgcmVjZXBjacOzbi4gRW4gU0NBVFRFUiBlbCB1c28gc3VlbGUgc2VyIGFsIHJldsOpczogc2UgcGFzYSBhbCBiw7pmZXIgZGUgcmVjZXBjacOzbiB5IHNlIGlnbm9yYW4gcmVjdnR5cGUgeSByZWN2Y291bnQuIEFzw60sIGV2aXRhIHF1ZSBlbCBwcm9jZXNvIHByaW5jaXBhbCBzZSBlbnbDrWUgZGF0b3MgYSBzw60gbWlzbW8u"}
 		],
@@ -635,11 +635,26 @@ var json =
 		"Q":"En CUDA, declarar los bloques y los hilos del siguiente modo <<N/THREADS_PER_BLOCK,THREADS_PER_BLOCK>>> es para:__",
 		"options":
 		[
-			{"tipe":"A","frase":"Asignar los datos a cada bloque correspondiente.","R":true},
-			{"tipe":"B","frase":"Asignar los datos a cada hilo correspondiente.","R":true},
+			{"tipe":"A","frase":"Asignar los datos a cada bloque correspondiente.","R":false},
+			{"tipe":"B","frase":"Asignar los datos a cada hilo correspondiente.","R":false},
 			{"tipe":"C","frase":"Calcular los suficientes bloques para todos los datos en caso de que la primera división no sea exacta ya que tomaría un bloque menos.","R":true},
 			{"tipe":"D","frase":"Calcular el número de hilos por bloque.","R":false},
 			{"INFO":"U2kgbGEgcHJpbWVyYSBkaXZpc2nDs24gbm8gZXMgZXhhY3RhLCBhbCByZWFsaXphciBsYSBmdW5jacOzbiBzdWVsbyBzZSBkZWNsYXJhcsOtYSB1biBibG9xdWUgbWVub3MgeSBubyBzZSBjdWJyaXLDrWFuIHRvZG9zIGxvcyBkYXRvcywgc2kgY3VhbmRvIGVzdG8gc3VjZWRlIHNlIGRlY2xhcmEgdW4gYmxvcXVlIHBvciBlbmNpbWEgYXVucXVlIGhheWEgaGlsb3MgZGVsIMO6bHRpbW8gYmxvcXVlIHF1ZSBubyByZWFsaWNlbiBwcm9jZXNhbWllbnRvIHBlcm8gc2UgYXNpZ25hcsOhbiB0b2RvcyBsb3MgZGF0b3MgYWwgcHJvY2VzYW1pZW50by4NCg=="}
+		],
+		"Difficulty":"easy",
+		"tags":["CUDA", "memoria distribuida", "scope"],
+		"comments":["RW4gY2FzbyBkZSBxdWUgZWwgdGFtYcOxbyB0b3RhbCBkZWwgYXJyYXkgZGUgZGF0b3Mgbm8gc2VhIGRpdmlzaWJsZSBlbnRyZSBlbCBuw7ptZXJvIGRlIHRocmVhZHMgcG9yIGJsb3F1ZSB5IG5vIHF1ZWRlIG5pbmfDum4gdHJvem8gZGVsIGFycmF5IHNpbiBwcm9jZXNhciBhdW5xdWUgZGUgZXN0YQ0KZm9ybWEgcHVlZGEgc29icmFyIGFsZ8O6biBoaWxvIHF1ZSBubyBvcGVyZSBuaW5nw7puIGVsZW1lbnRvIGRlIGxhIG1hdHJpeiwgc2Ugc29sdWNpb25hcsOtYSBjb24gKE4gKyBUSFJFQURTX1BFUl9CTE9DSyAtIDEpIC8gVEhSRUFEU19QRVJfQkxPQ0ssIFRIUkVBRFNfUEVSX0JMT0NLDQo="]
+	},	
+	{
+		"tipo":"CUDA",
+		"Q":"En CUDA, sobre los términos host y device:__",
+		"options":
+		[
+			{"tipe":"A","frase":"Host se refiere a la CPU y a su memoria y Device a la GPU y a su memoria.","R":true},
+			{"tipe":"B","frase":"Host se refiere a la GPU en la que se lanza el programa paralelo y Device al dispositivo de procesamiento.","R":false},
+			{"tipe":"C","Host se refiere al equipo físico que alberga la GPU y Device es la GPU en sí.","R":false},
+			{"tipe":"D","frase":"Ninguna de las anteriores.","R":false},
+			{"INFO":"UGFyYSBxdWUgcXVlZGVuIGJpZW4gZGlmZXJlbmNpYWRhcyBhbWJhcyBwYXJ0ZXMsIHNlIGRlZmluZSBjb21vIEhvc3QgYSBsYSBDUFUgKGRlc2RlIGRvbmRlIHNlIGxsYW1hcsOhIGEgbGEgZnVuY2nDs24gcGFyYWxlbGEgY29ycmVzcG9uZGllbnRlKSB5IHN1IG1lbW9yaWEgKGhvc3QgbWVtb3J5KTsgeSBEZXZpY2UgYSBsYSBHUFUgKGRvbmRlIGNvcnJlcsOhIGxhIGZ1bmNpw7NuKSB5IHN1IG1lbW9yaWEgKGRldmljZSBtZW1vcnkpLg=="}
 		],
 		"Difficulty":"easy",
 		"tags":["CUDA", "memoria distribuida", "scope"],
@@ -665,7 +680,7 @@ var json =
 		[
 			{"tipe":"A","frase":"Es un lenguaje de programación","R":false},
 			{"tipe":"B","frase":"Es una plataforma de paralelización","R":true},
-			{"tipe":"C","frase":"A y B son correctas","R":true},
+			{"tipe":"C","frase":"A y B son correctas","R":false},
 			{"tipe":"D","frase":"N / A","R":false},
 			{"INFO":"Q3VkYSBlcyB1bmEgcGxhdGFmb3JtYSBkZSBwYXJhbGVsaXphY2nDs24sIG5vIGVzIHVuIGxlbmd1YWplIGRlIHByb2dyYW1hY2nDs24u"}
 		],
