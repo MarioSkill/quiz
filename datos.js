@@ -804,7 +804,7 @@ var json =
 			{"tipe":"A","frase":"O(N)","R":true},
 			{"tipe":"B","frase":"1","R":false},
 			{"tipe":"C","frase":"O(N^2)","R":false},
-			{"tipe":"D","frase":"Ninguna de las Anteriores":false},
+			{"tipe":"D","frase":"Ninguna de las Anteriores","R":false},
 			{"INFO":"RGFkYXMgbGFzIGNhcmFjdGVyw61zdGljYXMgZGUgY29tcHV0byBkZSB1bmEgR1BVLCBlbiB1bmEgc29sYSBpbnRlcmFjY2nDs24gcG9kcsOtYW1vcyBtdWx0aXBsaWNhciAyIHZlY3RvcmVzLCBjb21vIHRlbmVtb3MgTiwgdmVjdG9yZXMsIGxhIGNvbXBsZWppZGFkIHNlcsOtYSBPKE4p"}
 		],
 		"Difficulty":"very hard	",
@@ -818,12 +818,12 @@ var json =
 			{"tipe":"A","frase":"Determina cual es el tamaño máximo de datos que se pueden enviar con las funciones send, recive","R":false},
 			{"tipe":"B","frase":"Esta función, permite obtener el tamaño de datos que están procesando todos los procesos.","R":false},
 			{"tipe":"C","frase":"Determina el tamaño del comunicador seleccionado, es decir, el número de procesos que están actualmente asociados a este","R":true},
-			{"tipe":"D","frase":"Ninguna de las Anteriores":false},
+			{"tipe":"D","frase":"Ninguna de las Anteriores","R":false},
 			{"INFO":"RXN0YSBmdW5jacOzbiBkZXZ1ZWx2ZSBlbCB0YW1hw7FvIGRlbCBjb211bmljYWRvciBzZWxlY2Npb25hZG8uIFN1IHVzbyBlcyBtdXkgY29tw7puIGVuIGxvcyBwcm9ncmFtYXMgYmFzYWRvcyBlbiBNUEkuIFBhcmEgZXhwbGljYXIgbWVqb3IgY8OzbW8gZnVuY2lvbmEgaGFyZW1vcyB1c28gZGUgdW5hIGlsdXN0cmFjacOzbi4gRW4gbGEgc2lndWllbnRlIGltYWdlbiBwb2RlbW9zIHZlciBkb3MgY29tdW5pY2Fkb3JlcywgZWwgY29tdW5pY2Fkb3IgZ2xvYmFsLCBlbiBlbCBxdWUgc2llbXByZSBzZSBlbmN1ZW50cmFuIHRvZG9zIGxvcyBwcm9jZXNvcyAoTVBJX0NPTU1fV09STEQpIHkgdW4gY29tdW5pY2Fkb3IgY3JlYWRvIG1hbnVhbG1lbnRlIChjb21tMSkgZW4gZWwgcXVlIHNvbG8gdGVuZW1vcyBjdWF0cm8gZGUgbG9zIHByb2Nlc29zLiBWZW1vcyBxdWUgZW4gdG90YWwgc29uIG9jaG8gcHJvY2Vzb3MgKGRlc2RlIFAwIGhhc3RhIFA3KS4gU2kgcGVkaW1vcyBlbCB0YW1hw7FvIGRlbCBjb211bmljYWRvciBnbG9iYWwsIG5vcyBkaXLDoSBxdWUgaGF5IG9jaG8gcHJvY2Vzb3MsIHBhcmEgZWwgb3RybyBjb211bmljYWRvciwgbm9zIGRpcsOhIHF1ZSBoYXkgNC4="}
 		],
 		"Difficulty":"very hard	",
 		"tags":["OpenMP", "Programación multihilo", "paralelización",]
-	},	
+	}	
 	
 ]
 }
